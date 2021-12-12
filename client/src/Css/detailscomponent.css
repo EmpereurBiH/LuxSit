@@ -1,0 +1,28 @@
+/* essential rules */
+
+.form-group {
+    display: flex;
+  }
+  .form-group label {
+    flex: 0 0 200px;
+  }
+  .form-group input {
+    flex: 1;
+  }
+  
+  
+  /* only for style */
+  .form-group {
+    margin-bottom:1em;
+  }
+
+  .form-group input{
+    padding:.4em;
+    border-radius:2px;
+    border:1px solid rgb(156, 33, 33);
+  }
+
+  .form-group label {
+    padding:.4em;
+    font-family:sans-serif;
+  }
