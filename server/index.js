@@ -3,6 +3,7 @@ const express = require('express');
 const cors = require('cors')
 const app = express ();
 const mysql = require('mysql');
+require('dotenv').config();
 //"npm run devStart" to star server side
 const db = mysql.createPool({
     host: "localhost",
@@ -260,6 +261,6 @@ app.delete("/api/deleteWeapon/:weaponID", (req, res) => {
 });
 
 
-app.listen(3001, () => {
-    console.log("Running on port 3001");
+app.listen(process.env.PORT || 3001, () => {
+    console.log("You are connected");
 });
