@@ -25,11 +25,11 @@ useEffect(() => {
 }, []);
 
   const deleteweapon = (weaponID) =>{
-    Axios.delete(`http://localhost:3001/api/deleteweapon/${weaponID}`);
+    Axios.delete(`https://luxsit.herokuapp.com/api/deleteweapon/${weaponID}`);
   }; 
 
   const updateweapon = (weaponID) =>{
-    Axios.put(`http://localhost:3001/api/update/weapon/${weaponID}`, {
+    Axios.put(`https://luxsit.herokuapp.com/api/update/weapon/${weaponID}`, {
       weaponName: editFormData.weaponName,
       weaponDescription: editFormData.weaponDescription,
       weaponDMG: editFormData.weaponDMG,

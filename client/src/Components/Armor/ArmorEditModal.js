@@ -9,7 +9,7 @@ export default function ArmorEditModal({idArmor, armorName, armorDescription }) 
     const [newArmorDescription, setNewArmorDescription] = useState ("");
 
     const updateArmor = (armor) =>{
-        Axios.put("http://localhost:3001/api/update/armor", {
+        Axios.put("https://luxsit.herokuapp.com/api/update/armor", {
           armorName: newArmorName,
           armorDescription: newArmorDescription, 
         });
@@ -18,7 +18,7 @@ export default function ArmorEditModal({idArmor, armorName, armorDescription }) 
       };
 
     const deleteArmor = (armor) =>{
-        Axios.delete(`http://localhost:3001/api/delete/armor${armor}`);
+        Axios.delete(`https://luxsit.herokuapp.com/api/delete/armor${armor}`);
       };
     
     return  (

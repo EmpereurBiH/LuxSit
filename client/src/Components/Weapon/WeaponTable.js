@@ -30,7 +30,7 @@ import weaponDetailsModal from "./WeaponDetailsComponent";
     }
 
     const updateweapon = (Weapon) =>{
-        Axios.put("http://localhost:3001/api/update/Weapon", {
+        Axios.put("https://luxsit.herokuapp.com/api/update/Weapon", {
           weaponName: newweaponName,
           weaponDescription: newweaponDescription, 
         });
@@ -39,11 +39,11 @@ import weaponDetailsModal from "./WeaponDetailsComponent";
       };
 
     const deleteweapon = (Weapon) =>{
-        Axios.delete(`http://localhost:3001/api/delete/Weapon${Weapon}`);
+        Axios.delete(`https://luxsit.herokuapp.com/api/delete/Weapon${Weapon}`);
       };
 
     useEffect(() =>{
-      Axios.get ("http://localhost:3001/api/get/weapons").then((response) => {
+      Axios.get ("https://luxsit.herokuapp.com/api/get/weapons").then((response) => {
         setweaponData(response.data);})
     .catch (error => {setError(error)});
     }, []);

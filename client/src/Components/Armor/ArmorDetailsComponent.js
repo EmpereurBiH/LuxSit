@@ -24,11 +24,11 @@ useEffect(() => {
 }, []);
 
   const deleteArmor = (armorID) =>{
-    Axios.delete(`http://localhost:3001/api/deleteArmor/${armorID}`);
+    Axios.delete(`https://luxsit.herokuapp.com/api/deleteArmor/${armorID}`);
   }; 
 
   const updateArmor = (armorID) =>{
-    Axios.put(`http://localhost:3001/api/update/Armor/${armorID}`, {
+    Axios.put(`https://luxsit.herokuapp.com//api/update/Armor/${armorID}`, {
       armorName: editFormData.armorName,
       armorDescription: editFormData.armorDescription,
       armorDEF: editFormData.armorDEF,

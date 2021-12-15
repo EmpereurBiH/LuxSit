@@ -26,11 +26,11 @@ useEffect(() => {
 }, []);
 
   const deleteEnemy = (enemyID) =>{
-    Axios.delete(`http://localhost:3001/api/deleteenemy/${enemyID}`);
+    Axios.delete(`https://luxsit.herokuapp.com/api/deleteenemy/${enemyID}`);
   }; 
 
   const updateEnemy = (enemyID) =>{
-    Axios.put(`http://localhost:3001/api/update/enemy/${enemyID}`, {
+    Axios.put(`https://luxsit.herokuapp.com/api/update/enemy/${enemyID}`, {
       enemyName: editFormData.enemyName,
       enemyDescription: editFormData.enemyDescription,
       enemyHP: editFormData.enemyHP,

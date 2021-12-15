@@ -30,7 +30,7 @@ import EnemyDetailsModal from "./EnemyDetailsComponent";
     }
 
     const updateEnemy = (Enemy) =>{
-        Axios.put("http://localhost:3001/api/update/Enemy", {
+        Axios.put("https://luxsit.herokuapp.com/api/update/Enemy", {
           EnemyName: newEnemyName,
           EnemyDescription: newEnemyDescription, 
         });
@@ -39,11 +39,11 @@ import EnemyDetailsModal from "./EnemyDetailsComponent";
       };
 
     const deleteEnemy = (Enemy) =>{
-        Axios.delete(`http://localhost:3001/api/delete/Enemy${Enemy}`);
+        Axios.delete(`https://luxsit.herokuapp.com/api/delete/Enemy${Enemy}`);
       };
 
     useEffect(() =>{
-      Axios.get ("http://localhost:3001/api/get/enemies").then((response) => {
+      Axios.get ("https://luxsit.herokuapp.com/api/get/enemies").then((response) => {
         setEnemyData(response.data);})
     .catch (error => {setError(error)});
     }, []);

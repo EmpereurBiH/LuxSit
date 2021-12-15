@@ -11,7 +11,7 @@ import Axios from "axios"
     const data = useMemo(() => playerData, [])
 
     useEffect(() =>{
-      Axios.get ("http://localhost:3001/api/get").then(json => setPlayerData(json.data))
+      Axios.get ("https://luxsit.herokuapp.com/api/get").then(json => setPlayerData(json.data))
     }, [])
 
     const tableInstance = useTable({

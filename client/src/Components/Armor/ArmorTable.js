@@ -30,7 +30,7 @@ import ArmorDetailsModal from "./ArmorDetailsComponent";
     }
 
     const updateArmor = (armor) =>{
-        Axios.put("http://localhost:3001/api/update/armor", {
+        Axios.put("https://luxsit.herokuapp.com/api/update/armor", {
           armorName: newArmorName,
           armorDescription: newArmorDescription, 
         });
@@ -39,11 +39,11 @@ import ArmorDetailsModal from "./ArmorDetailsComponent";
       };
 
     const deleteArmor = (armor) =>{
-        Axios.delete(`http://localhost:3001/api/delete/armor${armor}`);
+        Axios.delete(`https://luxsit.herokuapp.com/api/delete/armor${armor}`);
       };
 
     useEffect(() =>{
-      Axios.get ("http://localhost:3001/api/get/armors").then((response) => {
+      Axios.get ("https://luxsit.herokuapp.com/api/get/armors").then((response) => {
         setArmorData(response.data);})
     .catch (error => {setError(error)});
     }, []);

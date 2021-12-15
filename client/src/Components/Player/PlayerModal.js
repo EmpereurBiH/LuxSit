@@ -8,7 +8,7 @@ export default function PlayerModal({ playerName, playerPassword }) {
     const [newPassword, setNewPassword] = useState ("");
 
     const updatePlayer = (player) =>{
-        Axios.put("http://localhost:3001/api/update", {
+        Axios.put("https://luxsit.herokuapp.com/api/update", {
           playerName: player,
           playerPassword: newPassword, 
         });
@@ -16,7 +16,7 @@ export default function PlayerModal({ playerName, playerPassword }) {
       };
 
     const deletePlayer = (player) =>{
-        Axios.delete(`http://localhost:3001/api/delete/${player}`);
+        Axios.delete(`https://luxsit.herokuapp.com/api/delete/${player}`);
       };
     
     return  (
