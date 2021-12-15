@@ -16,13 +16,13 @@ function App(){
   const [show, setShow] = useState(false);
 
   useEffect(() =>{
-    Axios.get ("http://localhost:3001/api/get/players").then((response) => {
+    Axios.get ("https://luxsit.herokuapp.com/api/get/players").then((response) => {
       setPlayerList(response.data)
     });
   },[]);
 
   const submitPlayer = () => {
-    Axios.post("http://localhost:3001/api/insert", {
+    Axios.post("hhttps://luxsit.herokuapp.com/api/insert", {
       playerName: playerName,
       playerPassword: playerPassword,
     });
@@ -37,11 +37,11 @@ function App(){
   };
 
   const deletePlayer = (player) =>{
-    Axios.delete(`http://localhost:3001/api/delete/${player}`);
+    Axios.delete(`https://luxsit.herokuapp.com/api/delete/${player}`);
   };
 
   const updatePlayer = (player) =>{
-    Axios.put("http://localhost:3001/api/update", {
+    Axios.put("https://luxsit.herokuapp.com/api/update", {
       playerName: player,
       playerPassword: newPassword, 
     });

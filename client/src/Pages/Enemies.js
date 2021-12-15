@@ -20,7 +20,7 @@ export default function Enemies(){
     const [show, setShow] = useState(false);
 
     const submitEnemy = () => {
-        Axios.post("http://localhost:3001/api/insert/Enemy", {
+        Axios.post("https://luxsit.herokuapp.com/api/insert/Enemy", {
           enemyName: enemyName,
           enemyDescription: enemyDescription,
           enemyHP: enemyHP,

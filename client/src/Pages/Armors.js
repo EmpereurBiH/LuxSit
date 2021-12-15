@@ -19,7 +19,7 @@ export default function Armors(){
     const [show, setShow] = useState(false);
 
     const submitArmor = () => {
-        Axios.post("http://localhost:3001/api/insert/armor", {
+        Axios.post("https://luxsit.herokuapp.com/api/insert/armor", {
           armorName: armorName,
           armorDescription: armorDescription,
           armorDEF: armorDEF,

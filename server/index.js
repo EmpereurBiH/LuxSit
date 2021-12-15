@@ -6,10 +6,10 @@ const mysql = require('mysql');
 require('dotenv').config();
 //"npm run devStart" to star server side
 const db = mysql.createPool({
-    host: "localhost",
-    user: "root",
-    password: "Password@123",
-    database: "LuxSitDataBase"
+    host: "eu-cdbr-west-02.cleardb.net",
+    user: "bb3a343739d8b1",
+    password: "2bda5c55",
+    database: "heroku_df13a5c3523abed"
 });
 
 //replacing bodyparser

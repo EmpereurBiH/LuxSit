@@ -9,7 +9,7 @@ import { useLocation } from "react-router";
 import axios from "axios";
 import WeaponDetailsComponent from "../Components/Weapon/WeaponDetailsComponent";
 
-const baseUrl = "http://localhost:3001/api/get/weapondetails/"
+const baseUrl = "https://luxsit.herokuapp.com/api/get/weapondetails/"
 
 export default function Weapons(){
 
@@ -30,7 +30,7 @@ export default function Weapons(){
         
     useEffect(() => {
             console.log ('Use Effect Ran');
-            Axios.get(`http://localhost:3001/api/get/weapondetails/`, {
+            Axios.get(`https://luxsit.herokuapp.com/api/get/weapondetails/`, {
             params: {
                 idweapon: location.state.idweapon
             },

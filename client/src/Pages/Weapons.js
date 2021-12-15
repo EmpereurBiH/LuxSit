@@ -20,7 +20,7 @@ export default function Weapons(){
     const [show, setShow] = useState(false);
 
     const submitweapon = () => {
-        Axios.post("http://localhost:3001/api/insert/weapon", {
+        Axios.post("https://luxsit.herokuapp.com/api/insert/weapon", {
           weaponName: weaponName,
           weaponDescription: weaponDescription,
           weaponDMG: weaponDMG,

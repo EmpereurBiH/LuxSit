@@ -9,7 +9,7 @@ import { useLocation } from "react-router";
 import axios from "axios";
 import ArmorDetailsComponent from "../Components/Armor/ArmorDetailsComponent";
 
-const baseUrl = "http://localhost:3001/api/get/armordetails/"
+const baseUrl = "https://luxsit.herokuapp.com/api/get/armordetails/"
 
 export default function Armors(){
 
@@ -30,7 +30,7 @@ export default function Armors(){
         
     useEffect(() => {
             console.log ('Use Effect Ran');
-            Axios.get(`http://localhost:3001/api/get/armordetails/`, {
+            Axios.get(`https://luxsit.herokuapp.com/api/get/armordetails/`, {
             params: {
                 idarmor: location.state.idarmor
             },

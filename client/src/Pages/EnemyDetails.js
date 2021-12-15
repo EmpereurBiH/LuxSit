@@ -9,7 +9,7 @@ import { useLocation } from "react-router";
 import axios from "axios";
 import EnemyDetailsComponent from "../Components/Enemy/EnemyDetailsComponent";
 
-const baseUrl = "http://localhost:3001/api/get/enemydetails/"
+const baseUrl = "https://luxsit.herokuapp.com/api/get/enemydetails/"
 
 export default function Enemies(){
 
@@ -30,7 +30,7 @@ export default function Enemies(){
         
     useEffect(() => {
             console.log ('Use Effect Ran');
-            Axios.get(`http://localhost:3001/api/get/enemydetails/`, {
+            Axios.get(`https://luxsit.herokuapp.com/api/get/enemydetails/`, {
             params: {
                 idenemy: location.state.idenemy
             },
