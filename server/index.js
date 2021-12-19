@@ -9,9 +9,7 @@ const db = mysql.createPool({
     host: "eu-cdbr-west-02.cleardb.net",
     user: "bb3a343739d8b1",
     password: "2bda5c55",
-    database: "heroku_df13a5c3523abed",
-    debug: true,
-    socketPath: "/var/run/mysqld/mysqld.sock"
+    database: "heroku_df13a5c3523abed"
 });
 
 //replacing bodyparser
