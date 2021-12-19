@@ -10,7 +10,8 @@ const db = mysql.createPool({
     user: "bb3a343739d8b1",
     password: "2bda5c55",
     database: "heroku_df13a5c3523abed",
-    debug: true
+    debug: true,
+    socketPath: "/var/run/mysqld/mysqld.sock"
 });
 
 //replacing bodyparser
