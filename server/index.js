@@ -261,6 +261,6 @@ app.delete("/api/deleteWeapon/:weaponID", (req, res) => {
 });
 
 
-app.listen(process.env.PORT || 3001, () => {
-    console.log("You are connected");
+app.listen(process.env.PORT | PORT, () => {
+    console.log("Server running on port $(PORT)");
 });
